@@ -158,13 +158,6 @@ const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) =>
         return a.amount < b.amount ? 1 : -1;
       }
     });
-// Store creation
-const store = createStore(
-  combineReducers({
-    expenses: expensesReducer,
-    filters: filtersReducer,
-  })
-);
 
 store.subscribe(() => {
   const state = store.getState();
